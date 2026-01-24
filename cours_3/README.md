@@ -2,7 +2,7 @@
 
 ### 1. Transfert de props
 
-Réalisez cette exercice dans le dossier forwarded-props.
+Réalisez cet exercice dans le dossier forwarded-props.
 
 Votre tâche consiste à travailler sur le composant **Input** (dans le fichier input.tsx) afin qu’il retourne soit un élément `<textarea>`, soit un élément `<input>`, selon que la prop **richText** du composant **Input** est vraie ou fausse.
 
@@ -28,7 +28,7 @@ L'ui final devra ressembler à ça :
 
 ### 2. Création de composants flexibles
 
-Réalisez cette exercice dans le dossier flexible-components.
+Réalisez cet exercice dans le dossier flexible-components.
 
 Votre tâche consiste à concevoir un composant **Button** très réutilisable et personnalisable, pouvant être utilisé de toutes les manières suivantes (voir également le code dans le fichier **App.js**) :
 
@@ -113,3 +113,26 @@ Les boutons résultants du code jsx ci-dessus devront avoir cet aspect :
 
 ### Objectif
 Votre mission est de modifier le composant **Button** fourni dans le fichier **Button.js** pour qu’il prenne en charge tous ces modes et fonctionnalités, **sans créer de nouveaux composants**. Assurez-vous que le composant reste simple, flexible et réutilisable.
+
+---
+
+### 3.**Liaison bidirectionnelle (Two-Way Binding)**
+
+Réalisez cet exercice dans le dossier two-way-binding.
+
+Votre tâche consiste à **collecter les valeurs saisies** dans les deux contrôles d’entrée (un `<textarea>` et un `<input>`) en utilisant la **liaison bidirectionnelle** (two-way binding).
+
+Ensuite, vous devrez **transmettre ces valeurs** via les props appropriées au composant **Review**, qui existe déjà dans le projet.
+
+### **Fonctionnement final attendu**
+L’application doit permettre aux utilisateurs de :
+1. Saisir des valeurs dans les champs d’entrée.
+2. Voir ces valeurs **affichées en temps réel** dans le composant **Review**, situé sous les champs d’entrée.
+
+**Exemple visuel** : Le rendu final doit ressembler à l’illustration fournie (avec les valeurs saisies reflétées dans le composant **Review**).
+
+![two-way-binding-ex](./two-way-binding-ex.png)
+
+**Remarque** : Le bouton **"Save"** est présent à titre décoratif – **aucun développement n'est nécessaire** de votre part pour ce bouton.
+
+---
