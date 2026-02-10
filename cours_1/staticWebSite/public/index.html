@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site Personnel - Accueil</title>
+    <!--TP1.2 1)-->
+    <link rel="stylesheet" href="../styles.css">
+    <!--TP1.2 3)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <h1>Adrien Bichart</h1>
+                <!--TP1.2 6.b)-->
+                <!--TP1.2 6.c)-->
+                <ul>
+                    <li class="menu-el"><a class="menu-link" href="index.html">Accueil</a></li>
+                    <li class="menu-el"><a class="menu-link" href="experiences.html">Mon Parcours</a></li>
+                    <li class="menu-el"><a class="menu-link" href="contact.html">Me contacter</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>À propos de moi</h2>
+            <div class="profile-picture">
+                <!--TP1.2 7)-->
+                <img src="images/profile_picture.jpg" alt="Photo de profil">
+            </div>
+            <p>Bonjour ! Je m'appelle Adrien, et je suis un étudiant passionné par le développement web et les nouvelles technologies.</p>
+            <blockquote>
+                <!--TP1.2 8)-->
+                <p class="it">"La technologie ne résout pas les problèmes humains, mais elle nous donne des outils pour les affronter."</p>
+            </blockquote>
+        </section>
+
+        <section>
+            <h2>Mes Compétences</h2>
+            <h3>Langages et outils :</h3>
+            <!--TP1.2 9)-->
+            <div class="skills">
+                <div class="skillsSet">
+                    <h3>🖥️Web</h3>
+                    <span>🌐 HTML5</span>
+                    <span>💄CSS3</span>
+                    <span>⚡JavaScript</span>
+                    <span>🏴‍☠️Hacking</span>
+                </div>
+                <div class="skillsSet">
+                    <h3>🤖 Data & ML</h3>
+                    <span>🐍Python</span>
+                    <span>🔥Pytorch</span>
+                    <span>🌬️ Airflow</span>
+                    <span>🐘 PostgreSQL</span>
+                </div>
+            </div>
+            <h3>Attention tremblement de terre !</h3>
+            <p>(Copier ce code dans la console du navigateur)</p>
+            <pre>
+// Code "Tremblement de terre"
+setInterval(() => {
+    document.body.style.marginLeft = `${Math.random() * 20 - 10}px`;
+    document.body.style.marginTop = `${Math.random() * 20 - 10}px`;
+}, 100);
+            </pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 - Mon Site Personnel</p>
+    </footer>
+</body>
+</html>

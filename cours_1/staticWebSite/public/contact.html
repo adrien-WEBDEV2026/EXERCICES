@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site Personnel - Contact</title>
+    <!---TP1.2 1)-->
+    <link rel="stylesheet" href="../styles.css">
+    <!--TP1.2 3)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <h1>Adrien Bichart</h1>
+                <!--TP1.2 6.b)-->
+                <!--TP1.2 6.c)-->
+                <ul>
+                    <li class="menu-el"><a class="menu-link" href="index.html">Accueil</a></li>
+                    <li class="menu-el"><a class="menu-link" href="experiences.html">Mon Parcours</a></li>
+                    <li class="menu-el"><a class="menu-link" href="contact.html">Me contacter</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Formulaire de Contact</h2>
+            <form action="#" method="post">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="objet">Objet :</label>
+                <input type="text" id="objet" name="objet">
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Mes Réseaux</h2>
+            <ul>
+                <li><a href="https://linkedin.com/in/adrien-bichart/" target="_blank">🔗 LinkedIn</a></li>
+                <li><a href="https://github.com" target="_blank">🐙 GitHub</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Localisation</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2628.6423316851296!2d2.3589876967895536!3d48.78871820000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e673e24e04a9c3%3A0xc55cb3e676f95321!2sEfrei!5e0!3m2!1sfr!2sfr!4v1766831821069!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 - Mon Site Personnel</p>
+    </footer>
+</body>
+</html>

@@ -1,14 +1,186 @@
 
-/*I. Attribuer des couleurs aux différentes parties de la page HTML*/
+/*2. Attribuer des couleurs aux différentes parties de la page HTML*/
 
-/*II. Centrer tous les éléments*/
+/*Le fond de ma page est gris*/
+body {
+    background-color: rgb(231, 231, 231);
+}
 
-/*II.a.centrer le tableau*/
+/*Mes sections sont blanches*/
+section {
+    background-color: rgb(255, 255, 255);
+}
 
-/*II.b.Centrer le formulaire*/
+/*Ajout de l'arrondis des sections et de l'ombre*/
+section {
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
-/*III. La barre de navigation*/
+    /*on voit que le texte n'est pas espacé de la bordure*/
+    padding: 5px; /*ajout d'un léger padding*/
+    /*les sections se touchent*/
+    margin-bottom: 10px; /*ajout d'un léger margin également*/
+    width: auto; /*optionnel: laisse le navigateur calculer une largeur de l'élément */ 
+    box-sizing: border-box; /*optionnel: utile pour que la width inclue le padding + border + margin */
+}
 
-/*IV. Image*/
+/*Le titre est en blanc*/
+h1 {
+    color: rgb(255, 255, 255); 
+}
 
-/*V. Compétences*/
+/*Ajout de la couleur à mon header*/
+
+header {
+    background-color: rgb(9, 141, 15);
+}
+
+/*3. Ajoutez une police Google Font à votre CSS.*/
+
+header, h1, h2, h3, h4, h5, h6, section, li, p, a, .outfit-typo {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*4. Centrer tous les éléments*/
+
+/*Pour faciliter les calculs, on applique border box à tous les éléments*/
+* {
+    box-sizing: border-box;
+}
+
+/*On prend toute la largeur de l'élément parent*/
+body {
+    width: 100%;
+}
+
+
+main {
+    width: 100%;
+}
+
+header, h1, h2, h3, h4, h5, h6, section, li, p {
+    position: static; /*valeur par défaut de tous les éléments*/
+    text-align: center; /*Permet de centrer tout le texte*/
+    width: 100%;
+}
+
+/*5.a.centrer le tableau*/
+
+table, th, td {
+    margin-left: auto;
+    margin-right: auto;
+    /*On en profite pour le stylisé*/
+    border-collapse: collapse; /*une seule bordure*/
+    border: 1px dashed black;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+/*5.b.Centrer le formulaire*/
+
+/* On peut simplement contraindre les éléments à être affichés en mode block*/
+
+label {
+    display: block;
+}
+
+button {
+    display: block;
+    margin: auto; /* ajuste automatiquement les marges du button*/
+}
+
+/* Nous verrons ensuite une méthode plus pratique pour centrer les éléments*/
+
+/*6. La barre de navigation*/
+/*6.a*/
+body {
+    margin: 0; /*nécessaire d'aller débugguer dans le navigateur pour voir la valeur par défaut*/
+}
+
+header {
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 1em;
+}
+
+/*6.b. Menu horizontale*/
+
+/*1èrement toutes les listes n'ont pas de puces*/
+li {
+    list-style-type: none;
+}
+
+/*Ensuite on applique display in-line aux éléments de la liste*/
+
+.menu-el { display: inline; /*Menu en ligne*/}
+
+/*6.c. Liens non soulignés*/
+.menu-link {
+    color: #ffffff; /* Couleur par défaut des liens */
+    text-decoration: none; /* Optionnel : supprime le soulignement */
+    margin: 0.5em; /*léger espacement*/
+}
+
+/*6.d. Le lien devient bleu lorsque l'utilisateur passe sa souris dessus*/
+/*Utilisation de la pseudo classe hover*/
+.menu-link:hover {
+    color: blue; /* Couleur lorsque la souris est dessus */
+    text-decoration: underline; /* Optionnel : ajoute un soulignement */
+}
+
+
+/*7. Image*/
+
+/*7.a.b.c*/
+
+/*On créé un conteneur pour l'image de taille fixe*/
+.profile-picture {
+    height: 100px;
+    width: 100px;
+    overflow: hidden; /*gérer le dépassement : https://developer.mozilla.org/fr/docs/Web/CSS/Guides/Display/Flow_layout_and_overflow*/
+    border-radius: 50%; /*permet de faire un rond*/
+    display: inline-block; /*permet de centrer simplement*/
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /*Ajout de l'ombre*/
+}
+
+img {
+    width: 100%; /*réduit la taille de l'image, prend la largeur max de l'élément parent (ici profile-picture)*/
+    height: auto;
+}
+
+/*8. Citation en italique*/
+
+.it {
+    font-style: italic;
+}
+
+/*9. Compétences*/
+
+/*style des encarts avec les technologies*/
+span {
+    background-color: rgb(94, 94, 87);
+    padding: 4px;
+    border-radius: 5px;
+    color: white;
+    margin: 0.5em;
+    display: inline-block;
+}
+
+/*style div "Web" et "Data & ML" */
+.skillsSet {
+    padding: 4px;
+    margin: 20px;
+    width: 40%; /*tenir compte du margin ! */
+    border-radius: 5px;
+    background-color: beige;
+    display: inline-block;
+}
+
+/*On affiche le tout sous forme d'inline block*/
+.skills {
+    display: inline-block;
+}
+
