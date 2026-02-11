@@ -1,1 +1,208 @@
-/*#### Grid style ####*/
+/*#### Grid style ####*//*#### TP1.3 ####*/
+
+/*1) Adaptation de tailles de la police exemple*/
+@media (max-width: 768px) { /*L'approche étant mobile first pas besoin d'utiliser une media query pour le mobile.*/
+
+    section, li, p, a {
+        font-size: 0.7em;
+    }
+
+    header, h1, h2, h3, h4, h5, h6 {
+        font-size: 0.9em;
+        font-weight: 500;
+    }  
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    section, li, p, a {
+        font-size: 0.9em;
+    }
+
+    header, h1, h2, h3, h4, h5, h6 {
+        font-size: 1em;
+        font-weight: 500;
+    }   
+}
+
+@media (min-width: 1200px) {
+    section, li, p, a{
+        font-size: 1em;
+    }
+    header, h1, h2, h3, h4, h5, h6 {
+        font-weight: 600;
+    }   
+}
+
+/* 5) Flex Nav Bar ****/ 
+
+.nav-flex {
+    display: flex;
+    justify-content: space-evenly; /* Répartit l'espace horizontalement */
+    align-items: center;           /* Centre verticalement le titre et le menu */
+    width: 100%;
+}
+
+.menu-flex {
+    display: flex;                 /* Aligne les <li> horizontalement */
+    align-items: center;           /* Alignement vertical interne au menu */
+    gap: 20px;                     /* Espace constant entre les liens */
+    margin: 0;
+    padding: 0;
+}
+
+.menu-link {
+    white-space: nowrap;           /* Empêche les retours à la ligne pour tout le monde */
+}
+
+.site-title {
+    width: auto; /* Besoin d'enlever le paramètre width 100% placé par défaut sur les balises h1 sinon le titre prend trop de place dans la nav bar.*/
+}
+
+
+
+/* 6) Partie GRID */
+
+/*****mobile first => pas de media-query pour le mobile, style par défaut****/
+/*On définit une grille de 1 colonne et 4 lignes*/
+.conteneur {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns:repeat(1,1fr);
+        grid-template-rows: repeat(4,1fr);
+        grid-template-areas: /*Permet d'ajouter des identifiants qui pourront être utilisés plus tard pour les customiser*/
+        "prj1"
+        "prj2"
+        "prj3"
+        "ann";
+        gap:5px;
+        height:50vh; /* 1vh = 1% de la hauteur totale de la fenêtre du navigateur, donc l'élément fera 50% de la hauteur de la fenêtre*/
+        margin: 1em; /* taille des marges en générales*/
+        margin-top: 2em; /* taile marge du haut*/
+    }
+
+.el { /*style de base pour tous les éléments de la grid*/
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 10px;
+    font-size: 0.5em;
+    font-weight: 200;
+}
+
+/*****desktop and tablet****/
+@media (min-width: 768px) {
+    .conteneur {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns:repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+        grid-template-areas:
+        "prj1 prj1 prj2"
+        "prj1 prj1 prj2"
+        "prj3 prj3 ann";
+        gap:10px;
+        height:50vh;
+        min-height: 9em;
+        margin: 5em;
+        margin-top: 2em;
+
+    }
+
+    .el {
+        font-size: 1em;
+        font-weight: 400;
+    }
+}
+
+/***bonus : variation de la police des éléments de la grid pour le format tablette**/
+@media (min-width: 768px) and (max-width: 1200px) {
+    .el {
+        font-size: 0.8em;
+        font-weight: 400;
+    }
+}
+
+/*Cosmétique de chaque élément******/
+.el1 { 
+    grid-area: prj1; 
+    background: lightblue; 
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('../images/weather.jpg');
+    background-size: cover;
+}
+
+.el1:hover { /*Ajoute un effet de désaturation lorsqu'on passe la souris sur l'image.*/
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/weather.jpg');
+}
+
+.el2 { 
+    grid-area: prj2; 
+    background: lightgreen;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url("../images/aviron_team.jpg");
+    background-size: cover;
+}
+.el2:hover {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/aviron_team.jpg");
+}
+
+.el3 { 
+    grid-area: prj3; 
+    background: lightcoral;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url("../images/warehouse.jpg");
+    background-size: cover;
+}
+.el3:hover {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/warehouse.jpg");
+}
+.el4 { 
+    grid-area: ann; 
+    background: lightgrey; 
+    background-image: url("../images/suricate.jpg");
+    background-size: cover;
+}
+.el4:hover {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/suricate.jpg");
+}
+
+/*Partie titre du projet*/
+
+.text-overlay {
+    align-self: center;
+    position: relative;
+
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    box-sizing: border-box;
+    padding: 0.5em;
+    border-radius: 4px;
+    width: 50%;
+    height: auto;
+    max-width: 80%;
+    max-height: 80%;
+    margin: 0.2em;
+    
+    /*Gére le texte*/
+    word-wrap: break-word; /*Autorise le texte à se mettre sur plusieurs lignes.*/
+    white-space: normal; /*Empêche les mots trop grands de sortir du cadre en les brisant.*/
+    overflow: hidden; /*Coupe tout ce qui est plus grand que le conteneur*/
+}
+
+/*changement lors du survol de la souris*/
+[class^="el"]:hover .text-overlay {
+    background-color: rgb(18, 81, 255);
+}
+
+/*partie caché si pas de survol de souris*/
+.technos {
+    display: none;
+}
+
+/*On affiche cette partie au survol de la souris*/
+[class^="el"]:hover .technos {
+    display: block;
+}

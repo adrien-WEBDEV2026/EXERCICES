@@ -10,29 +10,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <script src="public/js/menu.js"></script>
 </head>
 <body>
     <header>
-    <nav>
-        <div class="nav-container"> 
-            <h1>Adrien Bichart</h1>
-            <ul>
-                <li class="menu-el"><a class="menu-link" href="index.html">Accueil</a></li>
-                <li class="menu-el"><a class="menu-link" href="experiences.html">Mon Parcours</a></li>
-                <li class="menu-el"><a class="menu-link" href="contact.html">Me contacter</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
+        <nav>
+            <div class="nav-flex">
+                <h1 class="site-title">Prénom Nom</h1>
+                <div class="menu-btn" id="menuBtn">
+                    <span class="menu-icon"></span>
+                    <span class="menu-icon"></span>
+                    <span class="menu-icon"></span>
+                </div>
+                <ul class="menu menu-flex" id="menu-flex">
+                    <li><a class="menu-link" href="index.html">Accueil</a></li>
+                    <li><a class="menu-link" href="experiences.html">Mon Parcours</a></li>
+                    <li><a class="menu-link" href="contact.html">Me contacter</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     <main>
         <section>
             <h2>À propos de moi</h2>
             <div class="profile-picture">
                 <!--TP1.2 7)-->
-                <img src="images/profile_picture.jpg" alt="Photo de profil">
+                <img src="public/images/profile_picture.jpg" alt="Photo de profil">
             </div>
-            <p>Bonjour ! Je m'appelle Adrien, et je suis un étudiant passionné par le développement web et les nouvelles technologies.</p>
+            <p>Bonjour ! Je m'appelle [Votre Prénom], et je suis un(e) étudiant(e) passionné(e) par le développement web et les nouvelles technologies.</p>
             <blockquote>
                 <!--TP1.2 8)-->
                 <p class="it">"La technologie ne résout pas les problèmes humains, mais elle nous donne des outils pour les affronter."</p>

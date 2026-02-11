@@ -1,9 +1,67 @@
 /*#### Burger Menu ####*/
 
+.menu {
+    display: none;
+}  
+    
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: fixed;
+    box-sizing: border-box;
+    /* top: 20px; */
+    left: 20px;
+}
+
+.menu-open {
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateX(0); /*on place le menu au début du repère en haut à gauche*/
+    position: fixed; /*grâce à ça notamment aussi*/
+    display: block; /*on veut que le menu soit en mode colonne*/
+    margin: 0;
+    padding: 1em;
+    top: 20px; /*au mm niveau que la croix*/
+    left: 60px; /*à droite de la croix (20 + 40 ) px*/
+    box-sizing: border-box;
+    font-size: 2em;
+} 
+
 .menu-icon {
-    display: block;
     width: 25px;
     height: 2px;
-    background: #000;
+    background: #ffffff;
     position: relative;
+    padding: 1px;
+    margin: 2px;
+}
+
+@media (min-width: 768px) {
+    .nav-flex {
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+    }
+
+    .site-title {
+        width: auto;
+    }
+
+    .menu-flex {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .menu {
+        width: auto;
+    }
+
+    .menu-btn {
+        display: none;
+    }
 }

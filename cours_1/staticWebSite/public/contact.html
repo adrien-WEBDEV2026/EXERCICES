@@ -10,20 +10,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <script src="public/js/menu.js"></script>
 </head>
 <body>
     <header>
-    <nav>
-        <div class="nav-container"> 
-            <h1>Adrien Bichart</h1>
-            <ul>
-                <li class="menu-el"><a class="menu-link" href="index.html">Accueil</a></li>
-                <li class="menu-el"><a class="menu-link" href="experiences.html">Mon Parcours</a></li>
-                <li class="menu-el"><a class="menu-link" href="contact.html">Me contacter</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
+        <nav>
+            <div class="nav-flex">
+                <h1 class="site-title">Prénom Nom</h1>
+                <div class="menu-btn" id="menuBtn">
+                    <span class="menu-icon"></span>
+                    <span class="menu-icon"></span>
+                    <span class="menu-icon"></span>
+                </div>
+                <ul class="menu menu-flex" id="menu-flex">
+                    <li><a class="menu-link" href="index.html">Accueil</a></li>
+                    <li><a class="menu-link" href="experiences.html">Mon Parcours</a></li>
+                    <li><a class="menu-link" href="contact.html">Me contacter</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     <main>
         <section>
@@ -48,7 +54,7 @@
         <section>
             <h2>Mes Réseaux</h2>
             <ul>
-                <li><a href="https://linkedin.com/in/adrien-bichart/" target="_blank">🔗 LinkedIn</a></li>
+                <li><a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a></li>
                 <li><a href="https://github.com" target="_blank">🐙 GitHub</a></li>
             </ul>
         </section>
