@@ -10,27 +10,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="public/js/menu.js"></script>
-
 </head>
 <body>
     <header>
-        <nav>
-            <div class="nav-flex">
-                <h1 class="site-title">Prénom Nom</h1>
-                <div class="menu-btn" id="menuBtn">
-                    <span class="menu-icon"></span>
-                    <span class="menu-icon"></span>
-                    <span class="menu-icon"></span>
-                </div>
-                <ul class="menu menu-flex" id="menu-flex">
-                    <li><a class="menu-link" href="index.html">Accueil</a></li>
-                    <li><a class="menu-link" href="experiences.html">Mon Parcours</a></li>
-                    <li><a class="menu-link" href="contact.html">Me contacter</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <nav>
+        <div class="nav-container"> 
+            <h1>Adrien Bichart</h1>
+            <ul>
+                <li class="menu-el"><a class="menu-link" href="index.html">Accueil</a></li>
+                <li class="menu-el"><a class="menu-link" href="experiences.html">Mon Parcours</a></li>
+                <li class="menu-el"><a class="menu-link" href="contact.html">Me contacter</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
     <main>
         <section>
@@ -105,31 +98,30 @@
             </article>
             
         </section>
-        
-        <!--TP1.3 6) Ajout de la section Projets-->
-        <section>
-            <h2>Projets</h2>
-            <div class="conteneur">
-                <div class="el el1">
-                    <div class="text-overlay">⛈️ Application de prédiction météo</div>
-                    <p class="technos"> Python, FastAPI, Pytorch</p>
-                </div>
-                <div class="el el2">
-                    <p class="text-overlay">🤵 Projet secondaire 1 : Flotte d'agents</p>
-                    <p class="technos"> Python, Langchain, Langfuse</p>
-                </div>
-                <div class="el el3">
-                    <p class="text-overlay">📦 Projet Secondaire 2 : Datawarehouse pour analyse de données</p>
-                    <p class="technos"> GCP, SQL, BigQuery, Spark</p>
-                </div>
-                <div class="el el4">
-                    <p class="text-overlay">🦒 Projet annexe : Classification multiclasse</p>
-                    <p class="technos"> Python, Scikit-learn, FastApi, Docker</p>
-                </div>
-            </div>
-            
-        </section>
+        <section id="projets">
+    <h2>🚀 Mes Projets</h2>
+    <div class="grid-projets">
+        <article class="projet projet-principal">
+            <h3>Super App IA</h3>
+            <p>Mon projet majeur de fin d'études.</p>
+        </article>
 
+        <article class="projet projet-secondaire">
+            <h3>Site E-commerce</h3>
+            <p>Vente de chaussettes.</p>
+        </article>
+
+        <article class="projet projet-secondaire">
+            <h3>Bot Discord</h3>
+            <p>Modération automatique.</p>
+        </article>
+
+        <article class="projet projet-mineur">
+            <h3>To-Do List</h3>
+            <p>Premier essai JS.</p>
+        </article>
+    </div>
+</section>
     </main>
 
     <footer>
