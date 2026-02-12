@@ -1,0 +1,12 @@
+{
+  "name": "js_exercices",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Car.js",
+  "type": "module",
+  "scripts": {
+    "test": "launch"
+  },
+  "author": "Adrien Bichart",
+  "license": "ISC"
+}
