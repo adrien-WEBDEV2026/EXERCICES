@@ -1,10 +1,19 @@
-export default function Input() {
-  // Todo: Accept forwarded ref and "connect" it to the <input> element
+import { forwardRef } from 'react';
+import type { ComponentPropsWithoutRef } from 'react';
+
+interface InputProps extends ComponentPropsWithoutRef<'input'> {
+  label: string;
+}
+
+// On utilise forwardRef pour capturer la 'ref' envoyée par le parent
+const Input = forwardRef<HTMLInputElement, InputProps>(({ label, ...props }, ref) => {
   return (
     <p className="control">
-      <label>TODO: Output label (received via props)</label>
-      {/* Todo: "Forward" remaining props to <input> element */}
-      <input />
+      <label>{label}</label>
+      {/* On branche la ref ici sur l'élément natif */}
+      <input {...props} ref={ref} />
     </p>
   );
-}
+});
+
+export default Input;
