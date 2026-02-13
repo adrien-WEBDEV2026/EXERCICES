@@ -1,0 +1,188 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --bg-color: #f4f7f6;
+  --card-bg: #ffffff;
+  --accent-color: #e74c3c; /* Rouge erreur */
+  --success-color: #27ae60; /* Vert export */
+  --border-radius: 12px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--secondary-color);
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* Header */
+.header h1 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+/* Inputs & Validation Visuelle */
+.inputs-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 150px; /* Responsive: ne descend pas sous 150px */
+}
+
+.input-wrapper input {
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.input-wrapper input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Classe ajoutée dynamiquement si erreur */
+.input-error {
+  border-color: var(--accent-color) !important;
+  background-color: #fff5f5;
+}
+
+/* Checkboxes stylées */
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8f9fa;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.checkbox-label:hover {
+  background: #eef2f3;
+}
+
+.checkbox-label.active {
+  background-color: #e8f4fd;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Bouton Export (Bonus) */
+.actions-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.btn-export {
+  background-color: var(--success-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-export:hover {
+  background-color: #219150;
+}
+
+/* Tableau Responsive */
+.table-container {
+  overflow-x: auto; /* Scroll horizontal sur mobile */
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.protein-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Force le scroll sur petits écrans */
+}
+
+.protein-table th {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 15px;
+  text-align: left;
+}
+
+.protein-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.protein-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.weight-cell {
+  background-color: #eef2f3;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* --- MEDIA QUERIES (RESPONSIVE MOBILE) --- */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px; /* Moins de padding sur mobile */
+  }
+
+  .inputs-row {
+    flex-direction: column; /* Inputs les uns sous les autres */
+    gap: 10px;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .checkbox-label {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
